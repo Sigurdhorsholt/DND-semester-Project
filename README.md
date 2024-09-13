@@ -3,3 +3,4 @@ Shared repo for .net development course project - Group work.
 Usernames:
 - Ceciliejs
 - Sigurdhorsholt
+- Jonasbj8
