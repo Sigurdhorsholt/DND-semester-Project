@@ -1,0 +1,15 @@
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\DND Lesson 2 Exercises\DND Lesson 2 Exercises\bin\Debug\net8.0\DND Lesson 2 Exercises.exe
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\DND Lesson 2 Exercises\DND Lesson 2 Exercises\bin\Debug\net8.0\DND Lesson 2 Exercises.deps.json
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\DND Lesson 2 Exercises\DND Lesson 2 Exercises\bin\Debug\net8.0\DND Lesson 2 Exercises.runtimeconfig.json
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\DND Lesson 2 Exercises\DND Lesson 2 Exercises\bin\Debug\net8.0\DND Lesson 2 Exercises.dll
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\DND Lesson 2 Exercises\DND Lesson 2 Exercises\bin\Debug\net8.0\DND Lesson 2 Exercises.pdb
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\DND Lesson 2 Exercises\DND Lesson 2 Exercises\obj\Debug\net8.0\DND Lesson 2 Exercises.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\DND Lesson 2 Exercises\DND Lesson 2 Exercises\obj\Debug\net8.0\DND Lesson 2 Exercises.AssemblyInfoInputs.cache
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\DND Lesson 2 Exercises\DND Lesson 2 Exercises\obj\Debug\net8.0\DND Lesson 2 Exercises.AssemblyInfo.cs
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\DND Lesson 2 Exercises\DND Lesson 2 Exercises\obj\Debug\net8.0\DND Lesson 2 Exercises.csproj.CoreCompileInputs.cache
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\DND Lesson 2 Exercises\DND Lesson 2 Exercises\obj\Debug\net8.0\DND Lesson 2 Exercises.sourcelink.json
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\DND Lesson 2 Exercises\DND Lesson 2 Exercises\obj\Debug\net8.0\DND Lesson 2 Exercises.dll
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\DND Lesson 2 Exercises\DND Lesson 2 Exercises\obj\Debug\net8.0\refint\DND Lesson 2 Exercises.dll
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\DND Lesson 2 Exercises\DND Lesson 2 Exercises\obj\Debug\net8.0\DND Lesson 2 Exercises.pdb
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\DND Lesson 2 Exercises\DND Lesson 2 Exercises\obj\Debug\net8.0\DND Lesson 2 Exercises.genruntimeconfig.cache
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\DND Lesson 2 Exercises\DND Lesson 2 Exercises\obj\Debug\net8.0\ref\DND Lesson 2 Exercises.dll

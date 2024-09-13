@@ -1,0 +1,14 @@
+C:\Users\sigur\RiderProjects\DND Lesson 1 Exercises\DND Lesson 1 Exercises\bin\Debug\net8.0\DND Lesson 1 Exercises.exe
+C:\Users\sigur\RiderProjects\DND Lesson 1 Exercises\DND Lesson 1 Exercises\bin\Debug\net8.0\DND Lesson 1 Exercises.deps.json
+C:\Users\sigur\RiderProjects\DND Lesson 1 Exercises\DND Lesson 1 Exercises\bin\Debug\net8.0\DND Lesson 1 Exercises.runtimeconfig.json
+C:\Users\sigur\RiderProjects\DND Lesson 1 Exercises\DND Lesson 1 Exercises\bin\Debug\net8.0\DND Lesson 1 Exercises.dll
+C:\Users\sigur\RiderProjects\DND Lesson 1 Exercises\DND Lesson 1 Exercises\bin\Debug\net8.0\DND Lesson 1 Exercises.pdb
+C:\Users\sigur\RiderProjects\DND Lesson 1 Exercises\DND Lesson 1 Exercises\obj\Debug\net8.0\DND Lesson 1 Exercises.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sigur\RiderProjects\DND Lesson 1 Exercises\DND Lesson 1 Exercises\obj\Debug\net8.0\DND Lesson 1 Exercises.AssemblyInfoInputs.cache
+C:\Users\sigur\RiderProjects\DND Lesson 1 Exercises\DND Lesson 1 Exercises\obj\Debug\net8.0\DND Lesson 1 Exercises.AssemblyInfo.cs
+C:\Users\sigur\RiderProjects\DND Lesson 1 Exercises\DND Lesson 1 Exercises\obj\Debug\net8.0\DND Lesson 1 Exercises.csproj.CoreCompileInputs.cache
+C:\Users\sigur\RiderProjects\DND Lesson 1 Exercises\DND Lesson 1 Exercises\obj\Debug\net8.0\DND Lesson 1 Exercises.dll
+C:\Users\sigur\RiderProjects\DND Lesson 1 Exercises\DND Lesson 1 Exercises\obj\Debug\net8.0\refint\DND Lesson 1 Exercises.dll
+C:\Users\sigur\RiderProjects\DND Lesson 1 Exercises\DND Lesson 1 Exercises\obj\Debug\net8.0\DND Lesson 1 Exercises.pdb
+C:\Users\sigur\RiderProjects\DND Lesson 1 Exercises\DND Lesson 1 Exercises\obj\Debug\net8.0\DND Lesson 1 Exercises.genruntimeconfig.cache
+C:\Users\sigur\RiderProjects\DND Lesson 1 Exercises\DND Lesson 1 Exercises\obj\Debug\net8.0\ref\DND Lesson 1 Exercises.dll
