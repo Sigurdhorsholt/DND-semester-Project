@@ -1,0 +1,27 @@
+[
+  {
+    "FirstName": "John",
+    "LastName": "Hitler",
+    "Age": 30,
+    "Gender": "M",
+    "Height": 178.2,
+    "Hobbies": [
+      "fishing",
+      "cage fight"
+    ],
+    "Married": true
+  },
+  {
+    "FirstName": "Sarah",
+    "LastName": "Connor",
+    "Age": 28,
+    "Gender": "F",
+    "Height": 165.5,
+    "Hobbies": [
+      "hiking",
+      "reading",
+      "robotics"
+    ],
+    "Married": false
+  }
+]

@@ -8,5 +8,5 @@ public class Person
     public double Height { get; set; }
     public bool Married { get; set; }
     public char Gender { get; set; }
-    public string[] Hobbies { get; set; }
+    public List<string> Hobbies { get; set; }
 }

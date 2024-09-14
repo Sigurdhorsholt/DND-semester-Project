@@ -1,0 +1,12 @@
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\FileStorage\FileStorage.Logic\bin\Debug\net8.0\FileStorage.Logic.deps.json
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\FileStorage\FileStorage.Logic\bin\Debug\net8.0\FileStorage.Logic.dll
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\FileStorage\FileStorage.Logic\bin\Debug\net8.0\FileStorage.Logic.pdb
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\FileStorage\FileStorage.Logic\obj\Debug\net8.0\FileStorage.Logic.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\FileStorage\FileStorage.Logic\obj\Debug\net8.0\FileStorage.Logic.AssemblyInfoInputs.cache
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\FileStorage\FileStorage.Logic\obj\Debug\net8.0\FileStorage.Logic.AssemblyInfo.cs
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\FileStorage\FileStorage.Logic\obj\Debug\net8.0\FileStorage.Logic.csproj.CoreCompileInputs.cache
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\FileStorage\FileStorage.Logic\obj\Debug\net8.0\FileStorage.Logic.sourcelink.json
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\FileStorage\FileStorage.Logic\obj\Debug\net8.0\FileStorage.Logic.dll
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\FileStorage\FileStorage.Logic\obj\Debug\net8.0\refint\FileStorage.Logic.dll
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\FileStorage\FileStorage.Logic\obj\Debug\net8.0\FileStorage.Logic.pdb
+C:\Users\sigur\OneDrive\Dokumenter\GitHub\DND-semester-Project\Sigurd_Exercises\FileStorage\FileStorage.Logic\obj\Debug\net8.0\ref\FileStorage.Logic.dll

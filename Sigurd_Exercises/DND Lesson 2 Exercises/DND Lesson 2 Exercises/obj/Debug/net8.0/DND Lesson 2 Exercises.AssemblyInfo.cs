@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DND Lesson 2 Exercises")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c6900e156e60cbd82eda69d1135d9a3bc065201")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e59a5d6e531c522bda253584a43a774489127de")]
 [assembly: System.Reflection.AssemblyProductAttribute("DND Lesson 2 Exercises")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DND Lesson 2 Exercises")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
