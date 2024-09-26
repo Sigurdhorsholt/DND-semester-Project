@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ex2_JsonIntro")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e59a5d6e531c522bda253584a43a774489127de")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+517c332d7dc35f95814c1750c38563a3e5b65d57")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ex2_JsonIntro")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ex2_JsonIntro")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

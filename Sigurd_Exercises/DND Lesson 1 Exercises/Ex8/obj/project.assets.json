@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sigur\\RiderProjects\\DND Lesson 1 Exercises\\Ex8\\Ex8.csproj",
+      "projectUniqueName": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\Sigurd_Exercises\\DND Lesson 1 Exercises\\Ex8\\Ex8.csproj",
       "projectName": "Ex8",
-      "projectPath": "C:\\Users\\sigur\\RiderProjects\\DND Lesson 1 Exercises\\Ex8\\Ex8.csproj",
+      "projectPath": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\Sigurd_Exercises\\DND Lesson 1 Exercises\\Ex8\\Ex8.csproj",
       "packagesPath": "C:\\Users\\sigur\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sigur\\RiderProjects\\DND Lesson 1 Exercises\\Ex8\\obj\\",
+      "outputPath": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\Sigurd_Exercises\\DND Lesson 1 Exercises\\Ex8\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sigur\\AppData\\Roaming\\NuGet\\NuGet.Config",

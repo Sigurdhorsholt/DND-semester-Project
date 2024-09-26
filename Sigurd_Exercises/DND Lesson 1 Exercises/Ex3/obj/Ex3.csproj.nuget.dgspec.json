@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sigur\\RiderProjects\\DND Lesson 1 Exercises\\Ex3\\Ex3.csproj": {}
+    "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\Sigurd_Exercises\\DND Lesson 1 Exercises\\Ex3\\Ex3.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sigur\\RiderProjects\\DND Lesson 1 Exercises\\Ex3\\Ex3.csproj": {
+    "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\Sigurd_Exercises\\DND Lesson 1 Exercises\\Ex3\\Ex3.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sigur\\RiderProjects\\DND Lesson 1 Exercises\\Ex3\\Ex3.csproj",
+        "projectUniqueName": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\Sigurd_Exercises\\DND Lesson 1 Exercises\\Ex3\\Ex3.csproj",
         "projectName": "Ex3",
-        "projectPath": "C:\\Users\\sigur\\RiderProjects\\DND Lesson 1 Exercises\\Ex3\\Ex3.csproj",
+        "projectPath": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\Sigurd_Exercises\\DND Lesson 1 Exercises\\Ex3\\Ex3.csproj",
         "packagesPath": "C:\\Users\\sigur\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sigur\\RiderProjects\\DND Lesson 1 Exercises\\Ex3\\obj\\",
+        "outputPath": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\Sigurd_Exercises\\DND Lesson 1 Exercises\\Ex3\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\sigur\\AppData\\Roaming\\NuGet\\NuGet.Config",
