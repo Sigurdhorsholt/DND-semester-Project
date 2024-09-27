@@ -64,5 +64,6 @@ The value proposition is that it sucks to go to the basement twice. First to boo
 
 **User Stories**
 
-System Admin:
+Daily Users:
+*"As a user, I want to login ti the system so that I can access the laundy booking system"*
 
