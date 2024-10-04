@@ -15,11 +15,11 @@ Usernames:
 
 ####  Description
 
-General idea is a system that allows users in an apartement complex with shared laundry system in the complex to book slots from their couch instead of going to the basement. 
+The general idea is a system that allows users in an apartement complex with shared laundry system in the complex to book slots from their couch instead of going to the basement. 
 
 The value proposition is that it sucks to go to the basement twice. First to book the slot and then later to do the laundry. You might even get 3 trips if no times are available.
 
-**The system**
+**The system overview**
 **Backend:**
 - Multible users
 -- SysAdmin for adding new apartement complexes and adding complex admins
@@ -48,7 +48,7 @@ The value proposition is that it sucks to go to the basement twice. First to boo
 -- Users should be registered through accept of the complex admin
 -- Users should be allowed to change email and username but should be locked to an appartment number that users themselves cannot change. This way the admin doesnt need to help when new people move into appartment and the account needs to change hands...
 
-**FrontEnd :**
+**FrontEnd:**
 
 - Log in page
 -- Register / forgot password / login
@@ -62,8 +62,21 @@ The value proposition is that it sucks to go to the basement twice. First to boo
 - Manage user page
 --  Change: username, password, email.
 
-**User Stories**
+**User Stories:**
+The user stories will cover the range of requirements for different user roles in the laundry booking system.
 
 Daily Users:
-*"As a user, I want to login ti the system so that I can access the laundy booking system"*
+- *"As a user, I want to log into the system so that I can access the laundy booking system"*
+- *"As a user, I want to reset my password via email in case I forget it so that I can regain access to my account without needing help from an admin."*
+- *"As a User, I want to view my current and upcoming laundry bookings on the homepage so that I can manage my laundry schedule effectively"*
+- *"As a User, I want to scrool through available laundry time slots so that I can choose a time that fits me to do my laundry."*
+- *"As a User, I want the system to temporarily lock the time slot I am selecting during the booking process so that no one else can book it until I confirm or cancel."*
+- *"As a User, I want to receive a confirmation of my booking once I finalize it so that I know my slot is successfully reserved."*
+- *"As a User, I want to cancel or modify my laundry booking so that I can free up the time slot or reschedule my laundry if needed."*
+- *"As a User, I want to see a visual indicator of which slots are available and which are booked so that I can plan my laundry based on the available time."*
+- *"As a User, I want to manage my account details, such as changing my username, email, or password"*
+
+
+
+Admin Users:
 
