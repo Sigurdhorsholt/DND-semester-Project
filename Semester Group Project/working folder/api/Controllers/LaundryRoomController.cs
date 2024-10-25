@@ -83,7 +83,7 @@ public class LaundryRoomController : ControllerBase
 
     
 
-    [HttpGet("bookings-on-date")]
+    [HttpGet("bookings-on-date")] //TODO : Move to other Controller
     public IActionResult GetBookingsOnDate([FromQuery] DateTime date)
     {
         string userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
