@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Settings from "../../Components/admConfig/Setting_Old";
+import Settings from "../../Components/admConfig/Settings";
 import SettingsService from "../../Services/settingsService";
 
 function AdminDashboard() {
@@ -24,8 +24,31 @@ function AdminDashboard() {
   };
 
   const handleSave = async (settings) => {
+
+console.log("Passed settings Settings:", settings)
+
+const formattedTimeSlots = settings.timeSlots.map(slot => ({
+  startTime: new Date(slot.startTime).toLocaleTimeString('en-GB', { hour12: false }),
+  endTime: new Date(slot.endTime).toLocaleTimeString('en-GB', { hour12: false })
+}));
+
+
+const formattedSettings = {
+  maxBookingsPerUser: settings.maxBooking,  
+  timeSlots: formattedTimeSlots,            
+  laundryMachines: settings.laundryMachines.map(machine => ({
+    machineName: machine.name,
+    machineType: machine.type
+  })),
+  allowShowUserInfo: settings.allowShowUserInfo 
+};
+
+console.log("Formatted Settings:", formattedSettings); // For debugging
+
+
+
     try {
-      await SettingsService.saveSettings(selectedRoom.id, settings);
+      await SettingsService.saveSettings(selectedRoom.id, formattedSettings);
       alert("Settings saved successfully!");
     } catch (error) {
       alert("Failed to save settings.");
@@ -35,17 +58,17 @@ function AdminDashboard() {
   //placeholder data to be passed on constructor
   const laundryRooms = [
     {
-      id: 12343,
+      id: 1,
       name: "Vestre Ringgade 218",
       address: "Vestre Ringgade 218, 8000 Aarhus, Danmark",
     },
     {
-      id: 24324,
+      id: 2,
       name: "TelefonTorvet 2B",
       address: "TelefonTorvet 2B, 8000 Aarhus, Danmark",
     },
     {
-      id: 34323,
+      id: 3,
       name: "Hasle Ringgade",
       address: "Hasle Ringgade 47, 8000 Aarhus, Danmark",
     },
@@ -100,7 +123,7 @@ function AdminDashboard() {
         <div className="w-3/4 p-4">
           {selectedRoom ? (
             <>
-              <p>NEW SETUP</p>
+
               <div>
                 <Settings
                   settings={currentSettings}
@@ -109,65 +132,8 @@ function AdminDashboard() {
                 />
               </div>
 
-              <p>OLD SETUP</p>
 
-              <div className="flex justify-between items-center mb-4">
-                <h2 className="text-xl font-bold">{selectedRoom.name}</h2>
-                <div>
-                  <button
-                    className={`px-4 py-2 mr-2 ${
-                      view === "users"
-                        ? "bg-teal-500 text-white"
-                        : "bg-gray-200"
-                    }`}
-                    onClick={() => setView("users")}
-                  >
-                    Users
-                  </button>
-
-                  <button
-                    className={`px-4 py-2 ${
-                      view === "config"
-                        ? "bg-teal-500 text-white"
-                        : "bg-gray-200"
-                    }`}
-                    onClick={() => setView("config")}
-                  >
-                    Admin Config
-                  </button>
-                </div>
-              </div>
-
-              {/* Toggleable Views */}
-              {view === "users" ? (
-                <div>
-                  <h3 className="text-lg font-bold mb-2">
-                    Users in {selectedRoom.name}
-                  </h3>
-                  {/* Here you can list users, fetched from an API */}
-                  <ul>
-                    {users.map((user) => (
-                      <li
-                        key={user.id}
-                        className="pt-4 
-                            transform transition-transform duration-100 hover:scale-"
-                      >
-                        Apartment: {user.apartment}, Last Logged in:{" "}
-                        {user.lastLoggedin}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ) : (
-                <div>
-                  <h3 className="text-lg font-bold mb-2">
-                    Admin Config for {selectedRoom.address}
-                  </h3>
-                  {/* Here you can display admin config options */}
-
-                  <Settings />
-                </div>
-              )}
+              
             </>
           ) : (
             <p>Please select a laundry room to manage.</p>

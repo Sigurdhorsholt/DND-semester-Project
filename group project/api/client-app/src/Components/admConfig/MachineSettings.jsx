@@ -1,5 +1,4 @@
-// MachineSettings.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const MachineSettings = ({ laundryMachines, setLaundryMachines }) => {
   const [newMachine, setNewMachine] = useState({ name: "", type: "" });
@@ -7,7 +6,7 @@ const MachineSettings = ({ laundryMachines, setLaundryMachines }) => {
 
   const addLaundryMachine = () => {
     if (!newMachine.name || !newMachine.type) {
-      setError("Machine name and type are required.");
+      setError("Maskinens navn og type er påkrævet."); // Translated: Machine name and type are required.
       return;
     }
     setLaundryMachines([...laundryMachines, newMachine]);
@@ -16,32 +15,35 @@ const MachineSettings = ({ laundryMachines, setLaundryMachines }) => {
   };
 
   return (
-    <div>
-      <h2>Laundry Machine Settings</h2>
+    <div className="mt-8 border-t-2 border-black-900">
+      <h2 className="font-bold font-xl">Vaske & Tørre Maskine Indstillinger</h2> {/* Translated: Laundry Machine Settings */}
       <input
         type="text"
         value={newMachine.name}
-        placeholder="Machine Name"
-        onChange={(e) =>
-          setNewMachine({ ...newMachine, name: e.target.value })
-        }
+        placeholder="Navngiv Ny Maskine" // Translated: Name New Machine
+        onChange={(e) => setNewMachine({ ...newMachine, name: e.target.value })}
+        className="m-2 p-2 border rounded"
       />
       <select
         value={newMachine.type}
-        onChange={(e) =>
-          setNewMachine({ ...newMachine, type: e.target.value })
-        }
+        onChange={(e) => setNewMachine({ ...newMachine, type: e.target.value })}
+        className="m-2 p-2 border rounded"
       >
-        <option value="">Select Machine Type</option>
-        <option value="Washer">Washer</option>
-        <option value="Dryer">Dryer</option>
+        <option value="">Vælg Maskine Type</option> {/* Translated: Select Machine Type */}
+        <option value="Vaskemaskine">Vaskemaskine</option> {/* Translated: Washer */}
+        <option value="Tørretumbler">Tørretumbler</option> {/* Translated: Dryer */}
       </select>
-      <button onClick={addLaundryMachine}>Add Machine</button>
-      {error && <p>{error}</p>}
+      <button
+        onClick={addLaundryMachine}
+        className="inline-block m-4 px-5 py-2 font-medium tracking-wide text-white capitalize transition-colors duration-300 transform bg-blue-600 rounded-lg hover:bg-blue-500 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-80"
+      >
+        Tilføj Maskine {/* Translated: Add Machine */}
+      </button>
+      {error && <p className="text-red-500">{error}</p>}
       <ul>
         {laundryMachines.map((machine, index) => (
           <li key={index}>
-            {machine.name} ({machine.type})
+            {machine.machineName} ({machine.machineType})
           </li>
         ))}
       </ul>

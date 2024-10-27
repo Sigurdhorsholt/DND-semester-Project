@@ -1,63 +1,118 @@
-// src/components/Navbar.jsx
-import React, { useContext } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+import { FaBars, FaTimes } from "react-icons/fa"; // Icons for burger menu
 
 const Navbar = () => {
-  const { user, logout, getDecodedToken } = useContext(AuthContext); // Get the user, logout, and getDecodedToken from AuthContext
+  const { user, logout, getDecodedToken } = useContext(AuthContext);
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for the burger menu
 
   const decodedToken = getDecodedToken();
-  const isAdmin = decodedToken?.IsAdmin === "true"; // Check if IsAdmin is "true" in the decoded token
+  const isAdmin = decodedToken?.IsAdmin === "true"; // Check if user is admin
 
-  console.log("from navbar: " + isAdmin);
+  // Toggle menu visibility
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
-    <>
-      <nav className="p-4 bg-gray-100">
-        <ul className="flex space-x-4">
+    <nav className="bg-gray-100 shadow-md">
+      <div className="container mx-auto flex items-center justify-between p-4">
+        {/* Logo */}
+        <div className="text-2xl font-bold">
+          <Link to="/" className="text-blue-500">
+            Laundry Booker
+          </Link>
+        </div>
+
+        {/* Burger Menu Icon for small screens */}
+        <div className="md:hidden">
+          <button onClick={toggleMenu} aria-label="Toggle Menu">
+            {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </button>
+        </div>
+
+        {/* Navigation Links */}
+        <ul
+          className={`${
+            isMenuOpen ? "block" : "hidden"
+          } md:flex md:space-x-6 absolute md:static top-full right-0 w-full md:w-auto bg-gray-100 md:bg-transparent p-4 md:p-0 z-50`}
+        >
+          {/* Home */}
           <li>
-            <Link to="/" className="text-blue-500">
+            <NavLink
+              to="/"
+              exact
+              className={({ isActive }) =>
+                isActive ? "text-red-500" : "text-blue-500"
+              }
+            >
               Home
-            </Link>
+            </NavLink>
           </li>
-          {user ? (
+
+          {/* Conditionally show admin and user dashboard links */}
+          {user && (
             <>
               {isAdmin && (
-                <>
-           
-                  <li>
-                    <Link to="/admin-dashboard" className="text-blue-500">
-                      Admin Dashboard
-                    </Link>
-                  </li>
-                </>
+                <li>
+                  <NavLink
+                    to="/admin-dashboard"
+                    className={({ isActive }) =>
+                      isActive ? "text-red-500" : "text-blue-500"
+                    }
+                  >
+                    Admin Dashboard
+                  </NavLink>
+                </li>
               )}
               <li>
-                <Link to="/user-dashboard" className="text-blue-500">
+                <NavLink
+                  to="/user-dashboard"
+                  className={({ isActive }) =>
+                    isActive ? "text-red-500" : "text-blue-500"
+                  }
+                >
                   User Dashboard
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link to="/user-dashboard" className="text-blue-500">
+                <NavLink
+                  to="/profile"
+                  className={({ isActive }) =>
+                    isActive ? "text-red-500" : "text-blue-500"
+                  }
+                >
                   Profile
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <button onClick={logout} className="text-red-500">
+                <button
+                  onClick={logout}
+                  className="text-red-500 focus:outline-none"
+                >
                   Log Out
                 </button>
               </li>
             </>
-          ) : (
+          )}
+
+          {/* Show login if no user is logged in */}
+          {!user && (
             <li>
-              <Link to="/login" className="text-blue-500">
+              <NavLink
+                to="/login"
+                className={({ isActive }) =>
+                  isActive ? "text-red-500" : "text-blue-500"
+                }
+              >
                 Log In
-              </Link>
+              </NavLink>
             </li>
           )}
         </ul>
-      </nav>
-    </>
+      </div>
+    </nav>
   );
 };
 

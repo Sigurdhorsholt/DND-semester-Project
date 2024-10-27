@@ -15,19 +15,7 @@ const Login = () => {
         try {
             await login(username, password);
 
-            /*
-     const response = await axios.post("/api/auth/login", {
-                username,
-                password,
-            });
-
-            // Store the JWT token in localStorage
-            localStorage.setItem("token", response.data.token);
-
-            // Redirect to dashboard or protected route
-            window.location.href = "/dashboard";
-
-            */
+        
         } catch (error) {
             setError("Invalid credentials. Please try again.");
         }
@@ -44,7 +32,7 @@ const Login = () => {
                         type="text"
                         value={username}
                         onChange={(e) => setUsername(e.target.value)}
-                        className="px-4 py-2 rounded border"
+                        className="px-4 py-2 rounded border text-black" 
                     />
                 </div>
                 <div className="mb-4">
@@ -53,7 +41,7 @@ const Login = () => {
                         type="password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
-                        className="px-4 py-2 rounded border"
+                        className="px-4 py-2 rounded border  text-black"
                     />
                 </div>
                 <button

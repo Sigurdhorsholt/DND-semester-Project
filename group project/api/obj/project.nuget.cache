@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EvMlX08NXgs=",
+  "dgSpecHash": "y9nSV9Q4oyY=",
   "success": true,
-  "projectFilePath": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\Semester Group Project\\working folder\\api\\api.csproj",
+  "projectFilePath": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\group project\\api\\api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\sigur\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.10\\microsoft.aspnetcore.authentication.jwtbearer.8.0.10.nupkg.sha512",
     "C:\\Users\\sigur\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.8\\microsoft.aspnetcore.openapi.8.0.8.nupkg.sha512",

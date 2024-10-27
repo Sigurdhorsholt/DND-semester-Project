@@ -1993,11 +1993,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\Semester Group Project\\working folder\\api\\api.csproj",
+      "projectUniqueName": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\group project\\api\\api.csproj",
       "projectName": "api",
-      "projectPath": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\Semester Group Project\\working folder\\api\\api.csproj",
+      "projectPath": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\group project\\api\\api.csproj",
       "packagesPath": "C:\\Users\\sigur\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\Semester Group Project\\working folder\\api\\obj\\",
+      "outputPath": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\group project\\api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\sigur\\AppData\\Roaming\\NuGet\\NuGet.Config",
