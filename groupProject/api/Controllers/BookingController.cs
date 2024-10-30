@@ -153,8 +153,8 @@ public class BookingController : ControllerBase
                             BookingDate = reader.GetDateTime("bookingdate"),
                             Apartment = reader.GetString("apartment"),
                             FullName = reader.GetString("FullName"),
-                            StartTime = reader.GetTimeSpan("startTime"),
-                            EndTime = reader.GetTimeSpan("endTime"),
+                            StartTime = reader.GetTimeSpan("startTime").ToString(@"hh\:mm"), // Format as HH:mm
+                            EndTime = reader.GetTimeSpan("endTime").ToString(@"hh\:mm"),     // Format as HH:mm
                             laundryRoomId = reader.GetInt32("laundryRoomId")
 
                         });
@@ -186,7 +186,7 @@ public class BookingDto
     public DateTime BookingDate { get; set; }
     public string Apartment { get; set; }
     public string FullName { get; set; }
-    public TimeSpan StartTime { get; set; }
-    public TimeSpan EndTime { get; set; }
+    public string StartTime { get; set; }
+    public string EndTime { get; set; }
     public int laundryRoomId { get; set; }
 }
