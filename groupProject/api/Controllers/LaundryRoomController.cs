@@ -80,6 +80,114 @@ public class LaundryRoomController : ControllerBase
         }
     }
 
+    [HttpGet("laundry-room/{id}")]
+    public IActionResult GetTimeSlotsForLaundryRoom(int id)
+    {
+        string query = @"
+                    SELECT 
+                    t.timeslotId,
+                    t.startTime,
+                    t.endTime
+                FROM 
+                    timeslots t
+                JOIN 
+                    laundryroom lr ON t.complexId = lr.complexId
+                WHERE 
+                    lr.laundryRoomId = @id;
+    ";
+        MySqlParameter[] parameters = { new MySqlParameter("@id", id) };
+
+        try
+        {
+            _dbConnection.OpenConnection();
+            var result = _dbConnection.ExecuteQuery(query, parameters);
+            _dbConnection.CloseConnection();
+
+            if (result.Rows.Count == 0)
+            {
+                return NotFound(new { message = "Laundry-room not found." });
+            }
+        
+            var timeslots = new List<SettingsController.TimeSlotDto>();
+
+            foreach (DataRow row in result.Rows)
+            {
+                var timeslot = new SettingsController.TimeSlotDto
+                {
+                    TimeSlotId = Convert.ToInt32(row["timeslotId"]),
+                    StartTime = TimeSpan.Parse(row["startTime"].ToString()).ToString(@"hh\:mm"), // Format as "hh:mm"
+                    EndTime = TimeSpan.Parse(row["endTime"].ToString()).ToString(@"hh\:mm")
+                };
+                timeslots.Add(timeslot);
+            }
+        
+            Console.WriteLine("timeslots before return: " + timeslots.ToString());
+        
+            return Ok(timeslots);
+        
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, e.Message);
+        }
+    }
+    
+    
+    [HttpGet("laundry-room/accessible/{userId}")]
+    public IActionResult GetAccessibleLaundryRoomsAndMachines(ulong  userId)
+    {
+                    string query = @"SELECT
+                        r.laundryRoomId,
+                        r.roomName,
+                        m.machineId,
+                        m.machineName
+                    FROM
+                         laundryroom r
+                    JOIN
+                         laundrymachine m ON m.laundryRoomId = r.laundryRoomId
+                    JOIN
+                        (
+                    SELECT complexId
+                    FROM livesin
+                    WHERE userId = @userId
+                    UNION
+                    SELECT complexId
+                    FROM adminmanages
+                    WHERE userId = @userId
+                        ) accessible_complexes ON accessible_complexes.complexId = r.complexId;";
+
+        try
+        {
+            _dbConnection.OpenConnection();
+            MySqlParameter[] parameters = { new MySqlParameter("@userId", MySqlDbType.UInt64) { Value = userId } }; // Adjust parameter type
+            DataTable result = _dbConnection.ExecuteQuery(query, parameters);
+            _dbConnection.CloseConnection();
+
+            var roomsAndMachines = result.AsEnumerable().GroupBy(row => new
+            {
+                RoomId = row.Field<ulong>("laundryRoomId"), // Change type to ulong
+                RoomName = row.Field<string>("roomName")
+            }).Select(g => new
+            {
+                RoomId = g.Key.RoomId,
+                RoomName = g.Key.RoomName,
+                Machines = g.Select(row => new
+                {
+                    MachineId = row.Field<ulong>("machineId"), // Change type to ulong
+                    MachineName = row.Field<string>("machineName")
+                }).ToList()
+            }).ToList();
+
+            return Ok(new { rooms = roomsAndMachines });
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error fetching accessible rooms and machines: " + ex.Message);
+            return StatusCode(500, "Internal server error");
+        }
+    }
+
 
     
     

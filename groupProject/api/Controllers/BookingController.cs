@@ -1,3 +1,5 @@
+using System.Runtime.InteropServices.JavaScript;
+
 namespace api.Controllers;
 using api.DataAccess.DbContext;
 using Microsoft.AspNetCore.Mvc;
@@ -120,6 +122,68 @@ public class BookingController : ControllerBase
 
         return ExecuteBookingQuery(query, new { laundryRoomId, bookingDate });
     }
+
+
+    [HttpPost("booking")]
+    public IActionResult CreateBooking([FromBody] BookingRequestDto bookingRequest)
+    {
+        
+        
+        Console.WriteLine("CreateBooking route hit \b .Booking request object: ",bookingRequest.ToString());
+        
+        string query = @"
+            INSERT INTO booking (userId, machineId, bookingdate, timeslotId, laundryRoomId, bookondate)
+            VALUES (@userId, @machineId, @bookingDate, @timeslotId, @laundryRoomId, @bookondate)";
+
+        try
+        {
+            _dbConnection.OpenConnection();
+            string availabilityCheckQuery = @"
+            SELECT COUNT(1)
+            FROM booking
+            WHERE machineId = @machineId 
+              AND bookingdate = @bookingDate
+              AND timeslotId = @timeslotId";
+
+            // check to verify in DB that booking is actually available. If user left window open for long without refreshing it might have been booked meanwhile....
+            using (var checkCommand = new MySqlCommand(availabilityCheckQuery, _dbConnection.GetConnection()))
+            {
+                checkCommand.Parameters.AddWithValue("@machineId", bookingRequest.MachineId);
+                checkCommand.Parameters.AddWithValue("@bookingDate", bookingRequest.BookingDate);
+                checkCommand.Parameters.AddWithValue("@timeslotId", bookingRequest.TimeslotId);
+
+                var isBooked = Convert.ToInt32(checkCommand.ExecuteScalar()) > 0;
+                if (isBooked)
+                {
+                    return Conflict("Timeslot is already booked");
+                }
+            }
+
+
+            using (var command = new MySqlCommand(query, _dbConnection.GetConnection()))
+            {
+                command.Parameters.AddWithValue("@userId", bookingRequest.UserId);
+                command.Parameters.AddWithValue("@machineId", bookingRequest.MachineId);
+                command.Parameters.AddWithValue("@bookingDate", bookingRequest.BookingDate);
+                command.Parameters.AddWithValue("@timeslotId", bookingRequest.TimeslotId);
+                command.Parameters.AddWithValue("@laundryRoomId", bookingRequest.LaundryRoomId);
+                command.Parameters.AddWithValue("@bookondate", DateTime.Today);
+                command.ExecuteNonQuery();
+                return Ok("Booking successfully created.");
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, "Internal server error");
+        }
+        finally
+        {
+            _dbConnection.CloseConnection();
+        }
+    }
+    
+    
     
     
     
@@ -153,8 +217,8 @@ public class BookingController : ControllerBase
                             BookingDate = reader.GetDateTime("bookingdate"),
                             Apartment = reader.GetString("apartment"),
                             FullName = reader.GetString("FullName"),
-                            StartTime = reader.GetTimeSpan("startTime"),
-                            EndTime = reader.GetTimeSpan("endTime"),
+                            StartTime = reader.GetTimeSpan("startTime").ToString(@"hh\:mm"), // Format as HH:mm
+                            EndTime = reader.GetTimeSpan("endTime").ToString(@"hh\:mm"),     // Format as HH:mm
                             laundryRoomId = reader.GetInt32("laundryRoomId")
 
                         });
@@ -186,7 +250,16 @@ public class BookingDto
     public DateTime BookingDate { get; set; }
     public string Apartment { get; set; }
     public string FullName { get; set; }
-    public TimeSpan StartTime { get; set; }
-    public TimeSpan EndTime { get; set; }
+    public string StartTime { get; set; }
+    public string EndTime { get; set; }
     public int laundryRoomId { get; set; }
+}
+
+public class BookingRequestDto
+{
+    public int UserId { get; set; }
+    public int MachineId { get; set; }
+    public DateTime BookingDate { get; set; }
+    public int TimeslotId { get; set; }
+    public int LaundryRoomId { get; set; }
 }

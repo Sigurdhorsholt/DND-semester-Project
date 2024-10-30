@@ -37,7 +37,7 @@ public class AuthController : ControllerBase
 
         // SQL query to insert a new user
         string query =
-            "INSERT INTO User (userName, email, password, userType) VALUES (@userName, @Email, @Password, @UserType)";
+            "INSERT INTO user (userName, email, password, userType) VALUES (@userName, @Email, @Password, @UserType)";
         MySqlParameter[] parameters =
         {
             new MySqlParameter("@userName", model.UserName),
@@ -67,67 +67,88 @@ public class AuthController : ControllerBase
             
             Console.WriteLine("Login route tested " + model.UserName.ToString() + " " + model.Password.ToString());
             // Check if user exists in the database
-            string query = "SELECT * FROM User WHERE userName = @userName";
+            string query = "SELECT * FROM user WHERE userName = @userName";
             MySqlParameter[] parameters = { new MySqlParameter("@userName", model.UserName) };
 
             try
             {
-                _dbConnection.OpenConnection();
-                DataTable result = _dbConnection.ExecuteQuery(query, parameters);
-                _dbConnection.CloseConnection();
-
-                if (result.Rows.Count == 0)
+                var userInfo = GetUserWithComplexInfo(model.UserName);
+                if (userInfo == null)
                 {
                     return Unauthorized(new { message = "User does not exist" });
                 }
 
-                // Get the user data
-                var user = result.Rows[0];
-                var storedPassword = user["password"];
-
-                var userIdResult = user["id"].ToString();
-                var isAdminresult = user["isAdmin"].ToString().ToLowerInvariant();
-                // Verify password
-                if (!model.Password.Equals(storedPassword))
+                // Check password
+                if (!model.Password.Equals(userInfo["Password"].ToString()))
                 {
                     return Unauthorized(new { message = "Incorrect password" });
                 }
 
-                // Generate JWT Token
-                var token = GenerateJwtToken(userIdResult, isAdminresult); // Pass user ID to token
-                
-                Console.WriteLine(user["id"].ToString() + " " + user["isAdmin"].ToString());
-                Console.WriteLine(token.ToString());
+                // Generate JWT Token with additional claims
+                var token = GenerateJwtToken(userInfo);
+
+                Console.WriteLine("Login successful for user ID: " + userInfo["id"]);
                 return Ok(new { token });
             }
             catch (Exception ex)
             {
+                Console.WriteLine("Login error: " + ex.Message);
                 return StatusCode(500, new { message = ex.Message });
-            }
+            }   
+
         }
 
-        private string GenerateJwtToken(string userId, string isAdmin)
-        {
-            var tokenHandler = new JwtSecurityTokenHandler();
+    private DataRow  GetUserWithComplexInfo(string userName)
+    {
+        string query = @"
+        SELECT u.id, u.userName, u.Email, u.FullName, u.Password, u.apartment, 
+               u.isAdmin, c.complexName, c.street, c.city, c.zipcode
+        FROM user u
+        LEFT JOIN livesin l ON u.id = l.userId
+        LEFT JOIN apartmentcomplex c ON l.complexId = c.id
+        WHERE u.userName = @userName";
+        
+        
+        MySqlParameter[] parameters = { new MySqlParameter("@userName", userName) };
+        _dbConnection.OpenConnection();
+        DataTable result = _dbConnection.ExecuteQuery(query, parameters);
+        _dbConnection.CloseConnection(); 
+        
+        return result.Rows.Count > 0 ? result.Rows[0] : null;
+    }
 
-            // Retrieve the secret key from the configuration
+    private string GenerateJwtToken(DataRow userInfo)
+        {
+            
+            var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.UTF8.GetBytes("ThisIsASecretKeyWithAtLeast32Characters");
 
-            var tokenDescriptor = new SecurityTokenDescriptor
+            var tokenDescriptor = new SecurityTokenDescriptor()
             {
-                Subject = new ClaimsIdentity(new[] {
-                    new Claim(ClaimTypes.NameIdentifier, userId), // Add userId claim
-                    new Claim("IsAdmin",
-                        (isAdmin == "true" ? "true" : "false").ToString()) // Add IsAdmin claim based on userType
+                Subject = new ClaimsIdentity(new[]
+                {
+                    new Claim(ClaimTypes.NameIdentifier, userInfo["id"].ToString()),
+                    new Claim(ClaimTypes.Name, userInfo["userName"].ToString()),
+                    new Claim(ClaimTypes.Email, userInfo["Email"].ToString()),
+                    new Claim("FullName", userInfo["FullName"].ToString()),
+                    new Claim("Apartment", userInfo["apartment"].ToString()),
+                    new Claim("ComplexName", userInfo["complexName"].ToString()),
+                    new Claim("Street", userInfo["street"].ToString()),
+                    new Claim("City", userInfo["city"].ToString()),
+                    new Claim("ZipCode", userInfo["zipcode"].ToString()),
+                    new Claim("IsAdmin", userInfo["isAdmin"].ToString() == "1" ? "true" : "false")
                 }),
-                Expires = DateTime.UtcNow.AddHours(1), // Token expiration
-                Issuer = "yourdomain.com",  // Add Issuer
-                Audience = "yourdomain.com", // Add Audience
-                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
+
+                Expires = DateTime.UtcNow.AddDays(1),
+                Issuer = _configuration["Issuer"],
+                Audience = _configuration["Audience"],
+                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),
+                    SecurityAlgorithms.HmacSha256Signature)
             };
 
             var token = tokenHandler.CreateToken(tokenDescriptor);
             return tokenHandler.WriteToken(token);
+
         }
         
         public class RegisterModel

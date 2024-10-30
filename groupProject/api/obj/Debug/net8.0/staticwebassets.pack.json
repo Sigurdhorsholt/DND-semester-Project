@@ -45,6 +45,14 @@
       "PackagePath": "staticwebassets\\static\\css\\main.1709683b.css.map"
     },
     {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\css\\main.4c0625f6.css",
+      "PackagePath": "staticwebassets\\static\\css\\main.4c0625f6.css"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\css\\main.4c0625f6.css.map",
+      "PackagePath": "staticwebassets\\static\\css\\main.4c0625f6.css.map"
+    },
+    {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\css\\main.4f325c11.css",
       "PackagePath": "staticwebassets\\static\\css\\main.4f325c11.css"
     },
@@ -59,6 +67,14 @@
     {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\css\\main.50140788.css.map",
       "PackagePath": "staticwebassets\\static\\css\\main.50140788.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\css\\main.53849bae.css",
+      "PackagePath": "staticwebassets\\static\\css\\main.53849bae.css"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\css\\main.53849bae.css.map",
+      "PackagePath": "staticwebassets\\static\\css\\main.53849bae.css.map"
     },
     {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\css\\main.54640c52.css",
@@ -91,6 +107,14 @@
     {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\css\\main.a88a2b99.css.map",
       "PackagePath": "staticwebassets\\static\\css\\main.a88a2b99.css.map"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\css\\main.ad89d419.css",
+      "PackagePath": "staticwebassets\\static\\css\\main.ad89d419.css"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\css\\main.ad89d419.css.map",
+      "PackagePath": "staticwebassets\\static\\css\\main.ad89d419.css.map"
     },
     {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\css\\main.aef9b08c.css",
@@ -149,6 +173,42 @@
       "PackagePath": "staticwebassets\\static\\js\\453.a5059bd1.chunk.js.map"
     },
     {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.0099345d.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.0099345d.js"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.0099345d.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.0099345d.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.0099345d.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.0099345d.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.08c49628.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.08c49628.js"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.08c49628.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.08c49628.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.08c49628.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.08c49628.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.1084ffde.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.1084ffde.js"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.1084ffde.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.1084ffde.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.1084ffde.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.1084ffde.js.map"
+    },
+    {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.110c0b69.js",
       "PackagePath": "staticwebassets\\static\\js\\main.110c0b69.js"
     },
@@ -183,6 +243,30 @@
     {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.13f62759.js.map",
       "PackagePath": "staticwebassets\\static\\js\\main.13f62759.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.18ce96c0.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.18ce96c0.js"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.18ce96c0.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.18ce96c0.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.18ce96c0.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.18ce96c0.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.19b990ed.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.19b990ed.js"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.19b990ed.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.19b990ed.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.19b990ed.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.19b990ed.js.map"
     },
     {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.1b74585b.js",
@@ -233,6 +317,30 @@
       "PackagePath": "staticwebassets\\static\\js\\main.351af393.js.map"
     },
     {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.36e3ddb6.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.36e3ddb6.js"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.36e3ddb6.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.36e3ddb6.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.36e3ddb6.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.36e3ddb6.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.3ac33563.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.3ac33563.js"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.3ac33563.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.3ac33563.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.3ac33563.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.3ac33563.js.map"
+    },
+    {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.3dcbe467.js",
       "PackagePath": "staticwebassets\\static\\js\\main.3dcbe467.js"
     },
@@ -255,6 +363,18 @@
     {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.40f77efa.js.map",
       "PackagePath": "staticwebassets\\static\\js\\main.40f77efa.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.4629296c.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.4629296c.js"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.4629296c.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.4629296c.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.4629296c.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.4629296c.js.map"
     },
     {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.46fae375.js",
@@ -317,6 +437,18 @@
       "PackagePath": "staticwebassets\\static\\js\\main.583d4e04.js.map"
     },
     {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.5b102361.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.5b102361.js"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.5b102361.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.5b102361.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.5b102361.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.5b102361.js.map"
+    },
+    {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.6047df20.js",
       "PackagePath": "staticwebassets\\static\\js\\main.6047df20.js"
     },
@@ -351,6 +483,30 @@
     {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.6583d7b9.js.map",
       "PackagePath": "staticwebassets\\static\\js\\main.6583d7b9.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.693cb6e0.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.693cb6e0.js"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.693cb6e0.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.693cb6e0.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.693cb6e0.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.693cb6e0.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.6a3d3895.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.6a3d3895.js"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.6a3d3895.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.6a3d3895.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.6a3d3895.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.6a3d3895.js.map"
     },
     {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.6ec9ffff.js",
@@ -401,6 +557,18 @@
       "PackagePath": "staticwebassets\\static\\js\\main.78d8f8e5.js.map"
     },
     {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.81404ba7.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.81404ba7.js"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.81404ba7.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.81404ba7.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.81404ba7.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.81404ba7.js.map"
+    },
+    {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.821d65b6.js",
       "PackagePath": "staticwebassets\\static\\js\\main.821d65b6.js"
     },
@@ -411,6 +579,42 @@
     {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.821d65b6.js.map",
       "PackagePath": "staticwebassets\\static\\js\\main.821d65b6.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.8c405843.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.8c405843.js"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.8c405843.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.8c405843.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.8c405843.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.8c405843.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.9015b59a.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.9015b59a.js"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.9015b59a.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.9015b59a.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.9015b59a.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.9015b59a.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.90e0533e.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.90e0533e.js"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.90e0533e.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.90e0533e.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.90e0533e.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.90e0533e.js.map"
     },
     {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.93be06b7.js",
@@ -459,6 +663,18 @@
     {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.94c7e476.js.map",
       "PackagePath": "staticwebassets\\static\\js\\main.94c7e476.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.979871a9.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.979871a9.js"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.979871a9.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.979871a9.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.979871a9.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.979871a9.js.map"
     },
     {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.9cd701ba.js",
@@ -533,6 +749,30 @@
       "PackagePath": "staticwebassets\\static\\js\\main.b3a64dbc.js.map"
     },
     {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.b3d3309d.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.b3d3309d.js"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.b3d3309d.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.b3d3309d.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.b3d3309d.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.b3d3309d.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.b73466e5.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.b73466e5.js"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.b73466e5.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.b73466e5.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.b73466e5.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.b73466e5.js.map"
+    },
+    {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.b8cd5766.js",
       "PackagePath": "staticwebassets\\static\\js\\main.b8cd5766.js"
     },
@@ -557,6 +797,18 @@
       "PackagePath": "staticwebassets\\static\\js\\main.bacbdebe.js.map"
     },
     {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.bb7671d5.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.bb7671d5.js"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.bb7671d5.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.bb7671d5.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.bb7671d5.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.bb7671d5.js.map"
+    },
+    {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.bc23a24a.js",
       "PackagePath": "staticwebassets\\static\\js\\main.bc23a24a.js"
     },
@@ -567,6 +819,30 @@
     {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.bc23a24a.js.map",
       "PackagePath": "staticwebassets\\static\\js\\main.bc23a24a.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.d3b88361.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.d3b88361.js"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.d3b88361.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.d3b88361.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.d3b88361.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.d3b88361.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.d527dc8c.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.d527dc8c.js"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.d527dc8c.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.d527dc8c.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.d527dc8c.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.d527dc8c.js.map"
     },
     {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.d8992b6b.js",
@@ -651,6 +927,18 @@
     {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.f7f6e2dc.js.map",
       "PackagePath": "staticwebassets\\static\\js\\main.f7f6e2dc.js.map"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.f8116b0a.js",
+      "PackagePath": "staticwebassets\\static\\js\\main.f8116b0a.js"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.f8116b0a.js.LICENSE.txt",
+      "PackagePath": "staticwebassets\\static\\js\\main.f8116b0a.js.LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.f8116b0a.js.map",
+      "PackagePath": "staticwebassets\\static\\js\\main.f8116b0a.js.map"
     },
     {
       "Id": "C:\\Users\\sigur\\OneDrive\\Dokumenter\\GitHub\\DND-semester-Project\\groupProject\\api\\wwwroot\\static\\js\\main.fb70d60d.js",
