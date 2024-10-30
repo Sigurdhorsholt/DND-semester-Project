@@ -14,6 +14,11 @@ namespace api.DataAccess.DbContext
             _connection = new MySqlConnection(connectionString);
         }
 
+        public MySqlConnection GetConnection()
+        {
+            return _connection;
+        }
+
         // Open the connection
         public void OpenConnection()
         {

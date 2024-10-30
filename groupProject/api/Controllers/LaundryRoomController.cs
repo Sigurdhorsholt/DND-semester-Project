@@ -82,57 +82,7 @@ public class LaundryRoomController : ControllerBase
 
 
     
-
-    [HttpGet("bookings-on-date")] //TODO : Move to other Controller
-    public IActionResult GetBookingsOnDate([FromQuery] DateTime date)
-    {
-        string userId = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
-
-        // Query to retrieve all bookings on the specified date
-        string query = @"SELECT b.bookingId, 
-                            b.userId, 
-                            b.machineId, 
-                            b.bookingTimeStart, 
-                            b.bookingTimeEnd, 
-                            b.bookingdate, 
-                            b.bookondate
-                     FROM semprojlaundrydb.booking b
-                     WHERE b.bookingdate = @date";
-
-        MySqlParameter[] parameters = {
-            new MySqlParameter("@date", date.ToString("yyyy-MM-dd"))
-        };
-
-        try
-        {
-            _dbConnection.OpenConnection();
-            var result = _dbConnection.ExecuteQuery(query, parameters);
-            _dbConnection.CloseConnection();
-
-            if (result.Rows.Count == 0)
-            {
-                return NotFound(new { message = "No bookings found for this date." });
-            }
-
-            // Assuming result is a DataTable or similar structure
-            var bookings = result.AsEnumerable().Select(row => new 
-            {
-                BookingId = row["bookingId"],
-                UserId = row["userId"],
-                MachineId = row["machineId"],
-                BookingTimeStart = row["bookingTimeStart"],
-                BookingTimeEnd = row["bookingTimeEnd"],
-                BookingDate = row["bookingdate"],
-                BookOnDate = row["bookondate"]
-            });
-
-            return Ok(bookings); // Return the list of bookings
-        }
-        catch (Exception ex)
-        {
-            return StatusCode(500, new { message = ex.Message });
-        }
-    }
+    
 
     public class LaundryRoomDto
     {

@@ -6,38 +6,187 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 
-public class BookingController
+public class BookingController : ControllerBase
 {
     
-    
-    
-    
-    
-    [HttpGet("api/bookings")]
-    public IActionResult GetBookings(int laundryRoomId, DateTime bookingDate)
+    private readonly DatabaseConnection _dbConnection;
+    private readonly IConfiguration _configuration;
+
+    public BookingController(DatabaseConnection dbConnection, IConfiguration configuration)
     {
-        // SQL query to get all bookings for the specified laundryRoomId and bookingDate
-        string query = @"
-        SELECT b.bookingId, b.userId, b.machineId, b.bookingTimeStart, b.bookingTimeEnd, b.bookingdate, u.apartment
-        FROM booking b
-        JOIN user u ON b.userId = u.id
-        WHERE b.bookingdate = @bookingDate AND b.machineId IN (
-            SELECT machineId FROM laundrymachine WHERE laundryRoomId = @laundryRoomId
-        )";
+        _dbConnection = dbConnection;
+        _configuration = configuration;
+    }
     
-        // Execute query and return results as JSON
+    
+    //Get specific booking
+    //Get bookings for user
+    //Get bookings for entire laundryroom
+    //Get bookings for specific Laundry machines
+    
+    // 1. Get all bookings for a specific user
+    [HttpGet("user/{userId}")]
+    public IActionResult GetBookingsForUser(int userId)
+    {
+
+        string query = @"
+                SELECT b.bookingId, b.userId, b.machineId, b.bookingdate, b.laundryRoomId, u.apartment, u.FullName, s.startTime, s.endTime
+                FROM booking b
+                JOIN user u ON b.userId = u.id
+                JOIN timeslots s ON b.timeslotId = s.timeslotId
+                WHERE b.userId = @userId";
+
+        
+        return ExecuteBookingQuery(query, new { userId });
+
+  }
+    
+    
+    
+    
+    
+    
+    // 2. Get all bookings for a specific laundry room
+    [HttpGet("laundryroom/{laundryRoomId}")]
+    public IActionResult GetAllBookingsForLaundryRoom(int laundryRoomId)
+    {
+        string query = @"
+                SELECT b.bookingId, b.userId, b.machineId, b.bookingdate, b.laundryRoomId, u.apartment, u.FullName, s.startTime, s.endTime
+                FROM booking b
+                JOIN user u ON b.userId = u.id
+                JOIN timeslots s ON b.timeslotId = s.timeslotId
+                WHERE b.laundryRoomId = @laundryRoomId";
+
+        return ExecuteBookingQuery(query, new { laundryRoomId });
+    }
+    // 3. Get a specific booking by booking ID
+    [HttpGet("{bookingId}")]
+    public IActionResult GetBookingById(int bookingId)
+    {
+        string query = @"
+                SELECT b.bookingId, b.userId, b.machineId, b.bookingdate, b.laundryRoomId, u.apartment, u.FullName, s.startTime, s.endTime
+                FROM booking b
+                JOIN user u ON b.userId = u.id
+                JOIN timeslots s ON b.timeslotId = s.timeslotId
+                WHERE b.bookingId = @bookingId";
+
+        return ExecuteBookingQuery(query, new { bookingId });
     }
 
-    [HttpPost("api/bookings")]
-    public IActionResult BookSlot([FromBody] BookingDto booking)
+    // 4. Get all bookings for a specific machine
+    [HttpGet("machine/{machineId}")]
+    public IActionResult GetBookingsForMachine(int machineId)
     {
-        // Insert new booking into the database
         string query = @"
-        INSERT INTO booking (userId, machineId, bookingTimeStart, bookingTimeEnd, bookingdate, bookondate)
-        VALUES (@userId, @machineId, @bookingTimeStart, @bookingTimeEnd, @bookingdate, NOW())";
+                SELECT b.bookingId, b.userId, b.machineId, b.bookingdate, b.laundryRoomId, u.apartment, u.FullName, s.startTime, s.endTime
+                FROM booking b
+                JOIN user u ON b.userId = u.id
+                JOIN timeslots s ON b.timeslotId = s.timeslotId
+                WHERE b.machineId = @machineId";
 
-        // Execute query and return success response
+        return ExecuteBookingQuery(query, new { machineId });
     }
 
+    // 5. Get all upcoming bookings (from today onward)
+    [HttpGet("upcoming/{laundryRoomId}")]
+    public IActionResult GetUpcomingBookings(int laundryRoomId)
+    {
+        string query = @"
+                SELECT b.bookingId, b.userId, b.machineId, b.bookingdate, b.laundryRoomId, u.apartment, u.FullName, s.startTime, s.endTime
+                FROM booking b
+                JOIN user u ON b.userId = u.id
+                JOIN timeslots s ON b.timeslotId = s.timeslotId
+                WHERE b.bookingdate >= CURDATE()
+                AND  b.laundryRoomId = @laundryRoomId
+                ";
+
+        return ExecuteBookingQuery(query, new { laundryRoomId });
+    }
     
+    
+    
+    
+    // Get all bookings for a specific room and date
+    [HttpGet("laundryroom/{laundryRoomId}/date/{bookingDate}")]
+    public IActionResult GetBookingsForRoomAndDate(int laundryRoomId, DateTime bookingDate)
+    {
+        string query = @"
+                SELECT b.bookingId, b.userId, b.machineId, b.bookingdate, b.laundryRoomId, u.apartment, u.FullName, s.startTime, s.endTime
+                FROM booking b
+                JOIN user u ON b.userId = u.id
+                JOIN timeslots s ON b.timeslotId = s.timeslotId
+                WHERE b.laundryRoomId = @laundryRoomId
+                  AND b.bookingdate = @bookingDate";
+
+        return ExecuteBookingQuery(query, new { laundryRoomId, bookingDate });
+    }
+    
+    
+    
+    
+    
+    
+    // Utility function to execute booking queries with parameters
+    private IActionResult ExecuteBookingQuery(string query, object parameters)
+    {
+        try
+        {
+            _dbConnection.OpenConnection();
+
+            using (var cmd = new MySqlCommand(query, _dbConnection.GetConnection()))
+            {
+                foreach (var property in parameters.GetType().GetProperties())
+                {
+                    cmd.Parameters.AddWithValue($"@{property.Name}", property.GetValue(parameters));
+                }
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    var bookings = new List<BookingDto>();
+                    while (reader.Read())
+                    {
+                        bookings.Add(new BookingDto
+                        {
+                            BookingId = reader.GetInt32("bookingId"),
+                            UserId = reader.GetInt32("userId"),
+                            MachineId = reader.GetInt32("machineId"),
+                            BookingDate = reader.GetDateTime("bookingdate"),
+                            Apartment = reader.GetString("apartment"),
+                            FullName = reader.GetString("FullName"),
+                            StartTime = reader.GetTimeSpan("startTime"),
+                            EndTime = reader.GetTimeSpan("endTime"),
+                            laundryRoomId = reader.GetInt32("laundryRoomId")
+
+                        });
+                    }
+                    return Ok(bookings);
+                }
+            }
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            return StatusCode(500, "Internal server error");
+        }
+        finally
+        {
+            _dbConnection.CloseConnection();
+        }
+    }
+    
+    
+    }
+
+
+public class BookingDto
+{
+    public int BookingId { get; set; }
+    public int UserId { get; set; }
+    public int MachineId { get; set; }
+    public DateTime BookingDate { get; set; }
+    public string Apartment { get; set; }
+    public string FullName { get; set; }
+    public TimeSpan StartTime { get; set; }
+    public TimeSpan EndTime { get; set; }
+    public int laundryRoomId { get; set; }
 }
